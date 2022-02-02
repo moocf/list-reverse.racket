@@ -1,13 +1,13 @@
 #lang racket
 
-; (append n lst): N X L -> L
+; (list.append n lst): N X L -> L
 ; appends a value to end of list
-(define append
+(define list.append
   (lambda (n lst)
     (foldr cons (list n) lst)))
 
-; (reverse lst): L -> L
+; (list.reverse lst): L -> L
 ; reverses the order of elements in a list
-(define reverse
+(define list.reverse
   (lambda (lst)
-    (foldr append (list) lst)))
+    (foldr list.append (list) lst)))
